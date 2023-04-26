@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.spring_demo.mapper.MemberMapper">
+<select id="searchByMap" parameterType="org.example.spring_demo.entity.MemberInfo" resultType="java.util.Map">
+    select * from `member` inner join info on `member`.id=info.member_id where `member`.id=#{id} and `create_time`=#{createTime}
+</select>
+    <select id="searchByMap1" parameterType="org.example.spring_demo.entity.MemberInfo" resultType="java.util.Map">
+        select * from `member` inner join info on `member`.id=info.member_id where `member`.id=${id} and `create_time`='${createTime}'
+    </select>
+</mapper>
