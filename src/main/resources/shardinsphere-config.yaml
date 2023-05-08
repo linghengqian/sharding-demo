@@ -1,28 +1,28 @@
 dataSources:
   member_master:
-    dataSourceClassName: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://crm.mysqlw.emr.com:3306/shardingdemo1?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:shardingdemo1;INIT=RUNSCRIPT FROM 'classpath:db/init-shardingdemo1.sql';MODE=MYSQL
     username: root
-    password: emr.2022
+    password: sa
   member_slave:
-    dataSourceClassName: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://crm.mysqlw.emr.com:3306/shardingdemo1?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:shardingdemo1;MODE=MYSQL
     username: root
-    password: emr.2022
+    password: sa
   info_master:
-    dataSourceClassName: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://crm.mysqlw.emr.com:3306/shardingdemo2?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:shardingdemo2;INIT=RUNSCRIPT FROM 'classpath:db/init-shardingdemo2.sql';MODE=MYSQL
     username: root
-    password: emr.2022
+    password: sa
   info_slave:
-    dataSourceClassName: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://crm.mysqlw.emr.com:3306/shardingdemo2?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:shardingdemo2;MODE=MYSQL
     username: root
-    password: emr.2022
+    password: sa
 rules:
   - !READWRITE_SPLITTING
     dataSources:
