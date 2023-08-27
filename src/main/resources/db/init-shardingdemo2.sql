@@ -2,7 +2,7 @@ CREATE TABLE `info`
 (
     `id`        int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
     `member_id` int(11) UNSIGNED NOT NULL,
-    `tel`       varchar(255)     NULL,
+    `tel`       varchar(255) NULL,
     PRIMARY KEY (`id`)
 );
 

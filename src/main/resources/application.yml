@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: sharding-demo
   datasource:
     driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
     url: jdbc:shardingsphere:classpath:shardinsphere-config.yaml

@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SuppressWarnings({"SqlResolve", "SqlNoDataSourceInspection"})
+@SuppressWarnings({"SqlResolve", "SqlNoDataSourceInspection", "SqlDialectInspection"})
 @SpringBootTest
 class StartTest {
     @Autowired
@@ -23,9 +23,9 @@ class StartTest {
         String searchByMap1 = """
                 select *
                 from `member`
-                         inner join info on `member`.id = info.member_id
+                         inner join `info` on `member`.id = `info`.member_id
                 where `member`.id = 1
-                  and `create_time` = '2023-04-26 11:21:26'
+                  and `member`.`create_time` = '2023-04-26 11:21:26'
                 """;
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(searchByMap1)) {
@@ -40,9 +40,9 @@ class StartTest {
         String searchByMap = """
                 select *
                 from `member`
-                         inner join info on `member`.id = info.member_id
+                         inner join `info` on `member`.id = `info`.member_id
                 where `member`.id = ?
-                  and `create_time` = ?
+                  and `member`.`create_time` = ?
                 """;
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(searchByMap)) {

@@ -6,5 +6,5 @@ CREATE TABLE `member`
     PRIMARY KEY (`id`)
 );
 
-insert into member (`name`, `create_time`)
+insert into `member` (`name`, `create_time`)
 VALUES ('name1', '2023-04-26 11:21:26');
