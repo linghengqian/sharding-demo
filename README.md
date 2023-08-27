@@ -17,7 +17,7 @@ cd ./sharding-demo/
 
 - Log.
 ```shell
-$ ./mvnw clean test
+./mvnw clean test
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ---------------------< org.example:sharding-demo >----------------------
@@ -54,21 +54,21 @@ $ ./mvnw clean test
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.example.spring_demo.StartTest
-00:07:20.942 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-00:07:20.959 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-00:07:21.028 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.example.spring_demo.StartTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-00:07:21.044 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.example.spring_demo.StartTest], using SpringBootContextLoader
-00:07:21.048 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.example.spring_demo.StartTest]: class path resource [org/example/spring_demo/StartTest-context.xml] does not exist
-00:07:21.050 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.example.spring_demo.StartTest]: class path resource [org/example/spring_demo/StartTestContext.groovy] does not exist
-00:07:21.052 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.example.spring_demo.StartTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-00:07:21.053 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.example.spring_demo.StartTest]: StartTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-00:07:21.104 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.example.spring_demo.StartTest]
-00:07:21.165 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/linghengqian/TwinklingLiftWorks/git/public/sharding-demo/target/classes/org/example/spring_demo/Start.class]
-00:07:21.167 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.example.spring_demo.Start for test class org.example.spring_demo.StartTest
-00:07:21.281 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.example.spring_demo.StartTest]: using defaults.
-00:07:21.282 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-00:07:21.295 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45ac5f9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@135606db, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@518caac3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@68034211, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f74980d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c372fe6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58594a11, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2a3888c1, org.springframework.test.context.event.EventPublishingTestExecutionListener@4167d97b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@14fa86ae, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e15fe2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@68f1b17f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1722011b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@57ad2aa7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5b3f61ff]
-00:07:21.298 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5c669da8 testClass = StartTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@31920ade testClass = StartTest, locations = '{}', classes = '{class org.example.spring_demo.Start}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@762ef0ea, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6db9f5a4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68567e20, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@fd07cbb, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69fb6037, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bec1f0c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+00:31:46.150 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:31:46.160 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:31:46.205 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.example.spring_demo.StartTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+00:31:46.216 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.example.spring_demo.StartTest], using SpringBootContextLoader
+00:31:46.221 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.example.spring_demo.StartTest]: class path resource [org/example/spring_demo/StartTest-context.xml] does not exist
+00:31:46.222 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.example.spring_demo.StartTest]: class path resource [org/example/spring_demo/StartTestContext.groovy] does not exist
+00:31:46.223 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.example.spring_demo.StartTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:31:46.224 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.example.spring_demo.StartTest]: StartTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:31:46.278 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.example.spring_demo.StartTest]
+00:31:46.335 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/linghengqian/TwinklingLiftWorks/git/public/sharding-demo/target/classes/org/example/spring_demo/Start.class]
+00:31:46.336 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.example.spring_demo.Start for test class org.example.spring_demo.StartTest
+00:31:46.415 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.example.spring_demo.StartTest]: using defaults.
+00:31:46.416 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+00:31:46.429 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4c012563, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@14a50707, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4d518b32, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4bd31064, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e3c0e40, org.springframework.test.context.support.DirtiesContextTestExecutionListener@329dbdbf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7354b8c5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@20d7d6fb, org.springframework.test.context.event.EventPublishingTestExecutionListener@4ef782af, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@11d8ae8b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@479cbee5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@59e2d8e3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2b72cb8a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7f8a9499, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5d43661b]
+00:31:46.434 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6b6776cb testClass = StartTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1863d2fe testClass = StartTest, locations = '{}', classes = '{class org.example.spring_demo.Start}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@23348b5d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6200f9cb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7530ad9c, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6a2f6f80, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5c90e579, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3e6fa38a], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -78,83 +78,42 @@ $ ./mvnw clean test
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.15)
 
-2023-08-28 00:07:21.636  INFO 6906 --- [           main] org.example.spring_demo.StartTest        : Starting StartTest using Java 17.0.8 on DESKTOP-PNK8EKR with PID 6906 (started by linghengqian in /home/linghengqian/TwinklingLiftWorks/git/public/sharding-demo)
-2023-08-28 00:07:21.639  INFO 6906 --- [           main] org.example.spring_demo.StartTest        : No active profile set, falling back to 1 default profile: "default"
-2023-08-28 00:07:23.533  INFO 6906 --- [           main] org.example.spring_demo.StartTest        : Started StartTest in 2.19 seconds (JVM running for 3.714)
-2023-08-28 00:07:23.913  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-08-28 00:07:24.213  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-08-28 00:07:24.361  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-08-28 00:07:24.460  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-08-28 00:07:24.495  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-08-28 00:07:24.495  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2023-08-28 00:07:24.506  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2023-08-28 00:07:24.506  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2023-08-28 00:07:24.512  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2023-08-28 00:07:24.513  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2023-08-28 00:07:24.520  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2023-08-28 00:07:26.390  INFO 6906 --- [           main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
-2023-08-28 00:07:26.392  INFO 6906 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-line 1:39 token recognition error at: 'T'
-line 1:40 token recognition error at: 'IM'
-line 1:43 token recognition error at: 'ST'
-line 1:42 mismatched input 'E' expecting {VARCHAR_ZH, INTEGER, BIGINT, VARCHAR, DATE}
-line 1:46 token recognition error at: 'M'
-line 1:47 token recognition error at: 'P'
-line 1:61 mismatched input '11' expecting ')'
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.981 s <<< FAILURE! - in org.example.spring_demo.StartTest
-[ERROR] searchByMap  Time elapsed: 4.149 s  <<< FAILURE!
-java.lang.AssertionError: 
-type mismatch:
-ref:
-JavaType(class java.lang.String)
-input:
-JavaType(class java.sql.Timestamp)
-        at org.example.spring_demo.StartTest.searchByMap(StartTest.java:51)
-
-[ERROR] searchByMap1  Time elapsed: 0.11 s  <<< FAILURE!
-java.lang.AssertionError: 
-type mismatch:
-ref:
-JavaType(class java.lang.String)
-input:
-JavaType(class java.sql.Timestamp)
-        at org.example.spring_demo.StartTest.searchByMap1(StartTest.java:32)
-
-2023-08-28 00:07:27.872  INFO 6906 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-08-28 00:07:27.876  INFO 6906 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-28 00:31:46.780  INFO 11254 --- [           main] org.example.spring_demo.StartTest        : Starting StartTest using Java 17.0.8 on DESKTOP-PNK8EKR with PID 11254 (started by linghengqian in /home/linghengqian/TwinklingLiftWorks/git/public/sharding-demo)
+2023-08-28 00:31:46.783  INFO 11254 --- [           main] org.example.spring_demo.StartTest        : No active profile set, falling back to 1 default profile: "default"
+2023-08-28 00:31:48.791  INFO 11254 --- [           main] org.example.spring_demo.StartTest        : Started StartTest in 2.322 seconds (JVM running for 3.464)
+2023-08-28 00:31:49.163  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-28 00:31:49.456  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-08-28 00:31:49.609  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-08-28 00:31:49.726  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-28 00:31:49.750  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-28 00:31:49.751  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-28 00:31:49.758  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-28 00:31:49.758  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-08-28 00:31:49.770  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-08-28 00:31:49.770  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-08-28 00:31:49.775  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-08-28 00:31:51.250  INFO 11254 --- [           main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (getNetworkTimeout)
+2023-08-28 00:31:51.252  INFO 11254 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-28 00:31:52.651  INFO 11254 --- [           main] ShardingSphere-SQL                       : Logic SQL: SELECT * FROM `logic_db`.`member` WHERE `ID` = ? AND `CREATE_TIME` = ?
+2023-08-28 00:31:52.651  INFO 11254 --- [           main] ShardingSphere-SQL                       : Actual SQL: member_slave ::: SELECT * FROM `member` WHERE `ID` = ? AND `CREATE_TIME` = ? ::: [1, 2023-04-26 11:21:26]
+2023-08-28 00:31:52.672  INFO 11254 --- [           main] ShardingSphere-SQL                       : Logic SQL: SELECT * FROM `logic_db`.`info` WHERE `MEMBER_ID` = ?
+2023-08-28 00:31:52.672  INFO 11254 --- [           main] ShardingSphere-SQL                       : Actual SQL: info_slave ::: SELECT * FROM `info` WHERE `MEMBER_ID` = ? ::: [1]
+2023-08-28 00:31:52.904  INFO 11254 --- [           main] ShardingSphere-SQL                       : Logic SQL: SELECT * FROM `logic_db`.`member` WHERE CAST(`ID` AS SIGNED) = 1 AND CAST(`CREATE_TIME` AS DATETIME) = TIMESTAMP '2023-04-26 11:21:26'
+2023-08-28 00:31:52.904  INFO 11254 --- [           main] ShardingSphere-SQL                       : Actual SQL: member_slave ::: SELECT * FROM `member` WHERE CAST(`ID` AS SIGNED) = 1 AND CAST(`CREATE_TIME` AS DATETIME) = TIMESTAMP '2023-04-26 11:21:26'
+2023-08-28 00:31:52.910  INFO 11254 --- [           main] ShardingSphere-SQL                       : Logic SQL: SELECT * FROM `logic_db`.`info` WHERE CAST(`MEMBER_ID` AS SIGNED) = 1
+2023-08-28 00:31:52.910  INFO 11254 --- [           main] ShardingSphere-SQL                       : Actual SQL: info_slave ::: SELECT * FROM `info` WHERE CAST(`MEMBER_ID` AS SIGNED) = 1
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.859 s - in org.example.spring_demo.StartTest
+2023-08-28 00:31:52.973  INFO 11254 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-28 00:31:52.984  INFO 11254 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Failures: 
-[ERROR]   StartTest.searchByMap:51 type mismatch:
-ref:
-JavaType(class java.lang.String)
-input:
-JavaType(class java.sql.Timestamp)
-[ERROR]   StartTest.searchByMap1:32 type mismatch:
-ref:
-JavaType(class java.lang.String)
-input:
-JavaType(class java.sql.Timestamp)
-[INFO] 
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.673 s
-[INFO] Finished at: 2023-08-28T00:07:29+08:00
+[INFO] Total time:  13.085 s
+[INFO] Finished at: 2023-08-28T00:31:54+08:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project sharding-demo: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/linghengqian/TwinklingLiftWorks/git/public/sharding-demo/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
 ```
